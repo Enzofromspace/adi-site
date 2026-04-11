@@ -10,12 +10,12 @@ Recommended filenames and ratios:
   16:10 ratio, target under 220 KB, use the main hero image.
 - `service-area-800x1000.webp`
   4:5 ratio, target under 120 KB, use the supporting image in the middle section.
-- `offer-airport-800x600.webp`
-  4:3 ratio, target under 90 KB.
-- `offer-day-hire-800x600.webp`
-  4:3 ratio, target under 90 KB.
-- `offer-hotel-transfer-800x600.webp`
-  4:3 ratio, target under 90 KB.
+- `offer-airport-800x800.webp`
+  1:1 ratio, target under 100 KB.
+- `offer-day-hire-800x800.webp`
+  1:1 ratio, target under 100 KB.
+- `offer-hotel-transfer-800x800.webp`
+  1:1 ratio, target under 100 KB.
 
 Speed recommendations:
 
