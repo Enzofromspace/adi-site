@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Placeholder one-page lead site for a Malindi and Mombasa taxi business, ready for GitHub Pages."
+  >
+  <title>Malindi Mombasa Taxi</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar container">
+      <div class="brand-lockup">
+        <p class="brand-kicker">MALINDI / MOMBASA</p>
+        <h1>ADI'S COASTAL TAXI</h1>
+      </div>
+
+      <div class="contact-lockup">
+        <p>CONTACT US</p>
+        <a href="tel:+254700000000">+254 700 000 000</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container panel">
+        <div class="hero-media">
+          <!-- Hero image: recommended aspect ratio 16:10. Save locally as assets/images/hero-taxi-1600x1000.webp. -->
+          <img
+            src="assets/images/hero-taxi-1600x1000.webp"
+            onerror="this.onerror=null;this.src='https://placehold.co/1600x1000/8ca3a3/ffffff?text=Malindi+to+Mombasa+Taxi';"
+            width="1600"
+            height="1000"
+            alt="Placeholder hero image for a Malindi and Mombasa taxi business"
+            fetchpriority="high"
+            decoding="async"
+          >
+
+          <div class="hero-badge">
+            <p>THE COASTAL RIDE YOU NEED IS ONE CALL AWAY</p>
+          </div>
+        </div>
+
+        <aside class="lead-form">
+          <p class="form-kicker">FAST REPLY</p>
+          <h2>FREE RIDE QUOTE</h2>
+
+          <form
+            id="lead-form"
+            action="mailto:bookings@malindimombasataxi.example"
+            method="post"
+            enctype="text/plain"
+            data-mailto="bookings@malindimombasataxi.example"
+          >
+            <label class="sr-only" for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Name" required>
+
+            <label class="sr-only" for="email">Email Address</label>
+            <input id="email" name="email" type="email" placeholder="Email Address" required>
+
+            <label class="sr-only" for="phone">Phone Number</label>
+            <input id="phone" name="phone" type="tel" placeholder="Phone Number" required>
+
+            <label class="sr-only" for="pickup">Pickup Area</label>
+            <input id="pickup" name="pickup" type="text" placeholder="Pickup Area">
+
+            <label class="sr-only" for="rideType">Most Interested In</label>
+            <select id="rideType" name="rideType" required>
+              <option value="">Please Select</option>
+              <option>Airport Transfer</option>
+              <option>Hotel Transfer</option>
+              <option>Intercity Ride</option>
+              <option>Hourly Hire</option>
+              <option>Other</option>
+            </select>
+
+            <button type="submit">GET THE QUOTE</button>
+          </form>
+
+          <p class="form-note">
+            Placeholder setup: this form opens your email app and sends to
+            <a href="mailto:bookings@malindimombasataxi.example">bookings@malindimombasataxi.example</a>.
+          </p>
+        </aside>
+      </section>
+
+      <section class="story container section-card">
+        <h2>COMFORTABLE RIDES ACROSS THE KENYAN COAST</h2>
+
+        <div class="story-grid">
+          <div class="story-image">
+            <!-- Supporting image: recommended aspect ratio 4:5. Save locally as assets/images/service-area-800x1000.webp. -->
+            <img
+              src="assets/images/service-area-800x1000.webp"
+              onerror="this.onerror=null;this.src='https://placehold.co/800x1000/a5b48b/ffffff?text=Taxi+Service+Area';"
+              width="800"
+              height="1000"
+              alt="Placeholder image for Malindi and Mombasa taxi service area"
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+
+          <div class="story-copy">
+            <p>
+              Placeholder copy: Coastal Taxi helps visitors, families, and business travelers move
+              smoothly between Malindi, Watamu, Kilifi, Mombasa, and the nearby airport routes.
+              Use this section to highlight safe drivers, clean vehicles, and dependable pickup times.
+            </p>
+            <p>
+              Placeholder copy: You can also position this block around hotel transfers, beach
+              outings, wedding transport, and long-distance trips with upfront pricing. Keep the
+              message short, warm, and focused on trust, local knowledge, and quick response times.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="offers container section-card">
+        <h2>THIS WEEK'S OFFERS:</h2>
+
+        <div class="offer-grid">
+          <article class="offer-card">
+            <!-- Offer image: recommended aspect ratio 4:3. Save locally as assets/images/offer-airport-800x600.webp. -->
+            <img
+              src="assets/images/offer-airport-800x600.webp"
+              onerror="this.onerror=null;this.src='https://placehold.co/800x600/8fb4c9/ffffff?text=Airport+Pickup';"
+              width="800"
+              height="600"
+              alt="Placeholder image for airport pickup offer"
+              loading="lazy"
+              decoding="async"
+            >
+            <div class="offer-copy">
+              <h3>Mombasa Airport Pickup</h3>
+              <p>Placeholder text for reliable airport transfers with luggage support and on-time arrival.</p>
+            </div>
+          </article>
+
+          <article class="offer-card">
+            <!-- Offer image: recommended aspect ratio 4:3. Save locally as assets/images/offer-day-hire-800x600.webp. -->
+            <img
+              src="assets/images/offer-day-hire-800x600.webp"
+              onerror="this.onerror=null;this.src='https://placehold.co/800x600/96b39e/ffffff?text=Day+Hire';"
+              width="800"
+              height="600"
+              alt="Placeholder image for day hire offer"
+              loading="lazy"
+              decoding="async"
+            >
+            <div class="offer-copy">
+              <h3>Malindi Day Hire</h3>
+              <p>Placeholder text for flexible rides around town, beach stops, meetings, and return trips.</p>
+            </div>
+          </article>
+
+          <article class="offer-card">
+            <!-- Offer image: recommended aspect ratio 4:3. Save locally as assets/images/offer-hotel-transfer-800x600.webp. -->
+            <img
+              src="assets/images/offer-hotel-transfer-800x600.webp"
+              onerror="this.onerror=null;this.src='https://placehold.co/800x600/8aa38a/ffffff?text=Hotel+Transfer';"
+              width="800"
+              height="600"
+              alt="Placeholder image for hotel transfer offer"
+              loading="lazy"
+              decoding="async"
+            >
+            <div class="offer-copy">
+              <h3>Hotel Transfer Special</h3>
+              <p>Placeholder text for seamless pickups between resorts, apartments, conference venues, and homes.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="social-strip container panel">
+        <div class="social-copy">
+          <p class="social-kicker">Contact us on</p>
+          <h2>FOLLOW THE NEXT BOOKING PATH</h2>
+        </div>
+
+        <div class="social-grid">
+          <a class="social-link" href="https://instagram.com/your-handle" aria-label="Instagram">
+            <span class="social-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img">
+                <rect x="4" y="4" width="16" height="16" rx="4" ry="4"></rect>
+                <circle cx="12" cy="12" r="3.5"></circle>
+                <circle cx="17.3" cy="6.7" r="1"></circle>
+              </svg>
+            </span>
+            <span class="social-path">instagram.com/your-handle</span>
+          </a>
+
+          <a class="social-link" href="https://www.facebook.com/your-page" aria-label="Facebook">
+            <span class="social-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img">
+                <path class="fill" d="M13.5 20v-6.1h2.3l.4-2.7h-2.7V9.4c0-.8.2-1.4 1.4-1.4h1.5V5.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.3v1.4H7.5v2.7h2.4V20z"></path>
+              </svg>
+            </span>
+            <span class="social-path">facebook.com/your-page</span>
+          </a>
+
+          <a class="social-link" href="https://www.tiktok.com/@your-handle" aria-label="TikTok">
+            <span class="social-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img">
+                <path class="fill" d="M14.5 5c.7 1.6 1.8 2.8 3.5 3.2v2.8c-1.4 0-2.6-.4-3.7-1.1v4.8c0 2.5-2 4.4-4.7 4.4-2.4 0-4.4-1.8-4.4-4.2 0-2.6 2.1-4.5 4.8-4.5.3 0 .6 0 .8.1v2.8a2.2 2.2 0 0 0-.8-.1c-1.1 0-2 .8-2 1.8s.9 1.8 1.9 1.8c1.2 0 1.9-.8 1.9-2.3V5z"></path>
+              </svg>
+            </span>
+            <span class="social-path">tiktok.com/@your-handle</span>
+          </a>
+
+          <a class="social-link" href="https://wa.me/254700000000" aria-label="WhatsApp">
+            <span class="social-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img">
+                <path d="M12 5a6.8 6.8 0 0 0-5.8 10.4L5 19l3.8-1.2A6.8 6.8 0 1 0 12 5z"></path>
+                <path class="fill" d="M9.7 9.2c.2-.4.4-.4.6-.4h.5c.2 0 .4 0 .5.4l.6 1.4c.1.2.1.4 0 .6l-.3.5c-.1.1-.2.2-.1.4.3.5.8 1.1 1.4 1.5.6.4 1 .6 1.2.7.2.1.4 0 .5-.1l.6-.7c.1-.1.3-.2.5-.1l1.5.7c.2.1.4.2.4.5v.4c0 .2-.1.4-.3.6-.4.4-1 .7-1.7.7-.8 0-1.7-.2-3-.9a8.2 8.2 0 0 1-3.1-3.3c-.7-1.3-.9-2.3-.9-3 0-.5.2-1 .6-1.5z"></path>
+              </svg>
+            </span>
+            <span class="social-path">wa.me/254700000000</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer container">
+      <p>Placeholder lead page for a Malindi and Mombasa taxi business.</p>
+      <p>&copy; <span id="year"></span> Coastal Taxi. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
