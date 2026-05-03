@@ -1,4 +1,4 @@
-const leadForm = document.querySelector("#lead-form");
+const mailtoForms = document.querySelectorAll("form[data-mailto]");
 const yearNode = document.querySelector("#year");
 const storySection = document.querySelector(".story.section-card");
 const offersSection = document.querySelector(".offers.section-card");
@@ -21,27 +21,25 @@ const syncSectionHeights = () => {
   storySection.style.minHeight = `${offersSection.offsetHeight}px`;
 };
 
-if (leadForm) {
-  leadForm.addEventListener("submit", (event) => {
+mailtoForms.forEach((form) => {
+  form.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const recipient = leadForm.dataset.mailto || "bookings@malindimombasataxi.example";
-    const formData = new FormData(leadForm);
-    const rideType = formData.get("rideType") || "New Taxi Inquiry";
-    const subject = `Website Lead: ${rideType}`;
-    const message = [
-      "New inquiry from the landing page",
-      "",
-      `Name: ${formData.get("name") || ""}`,
-      `Email: ${formData.get("email") || ""}`,
-      `Phone: ${formData.get("phone") || ""}`,
-      `Pickup Area: ${formData.get("pickup") || ""}`,
-      `Ride Type: ${rideType}`,
-    ].join("\n");
+    const recipient = form.dataset.mailto || "omaranwar575@gmail.com";
+    const formData = new FormData(form);
+    const subject = form.dataset.subject || "Website Lead";
+    const lines = ["New inquiry from the landing page", ""];
 
-    window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+    for (const [key, value] of formData.entries()) {
+      const formattedKey = key
+        .replace(/_/g, " ")
+        .replace(/\b\w/g, (character) => character.toUpperCase());
+      lines.push(`${formattedKey}: ${value || ""}`);
+    }
+
+    window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
   });
-}
+});
 
 syncSectionHeights();
 window.addEventListener("load", syncSectionHeights);

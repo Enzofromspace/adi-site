@@ -30,8 +30,34 @@ body {
   font-family: "Trebuchet MS", "Segoe UI", sans-serif;
   color: var(--ink);
   background:
-    radial-gradient(circle at top left, rgba(99, 178, 228, 0.16), transparent 24rem),
-    linear-gradient(180deg, var(--mist) 0%, var(--bg) 100%);
+    linear-gradient(rgba(240, 246, 250, 0.88), rgba(231, 236, 241, 0.88)),
+    url("assets/images/optimized/bg-768.jpg") center top / cover no-repeat;
+}
+
+@supports (background-image: image-set(url("assets/images/optimized/bg-768.jpg") type("image/jpeg") 1x)) {
+  body {
+    background-image:
+      linear-gradient(rgba(240, 246, 250, 0.88), rgba(231, 236, 241, 0.88)),
+      image-set(url("assets/images/optimized/bg-768.jpg") type("image/jpeg") 1x);
+  }
+}
+
+@media (min-width: 881px) {
+  body {
+    background-image:
+      linear-gradient(rgba(240, 246, 250, 0.88), rgba(231, 236, 241, 0.88)),
+      url("assets/images/optimized/bg-1280.jpg");
+  }
+}
+
+@supports (background-image: image-set(url("assets/images/optimized/bg-1280.jpg") type("image/jpeg") 1x)) {
+  @media (min-width: 881px) {
+    body {
+      background-image:
+        linear-gradient(rgba(240, 246, 250, 0.88), rgba(231, 236, 241, 0.88)),
+        image-set(url("assets/images/optimized/bg-1280.jpg") type("image/jpeg") 1x);
+    }
+  }
 }
 
 img {
@@ -123,6 +149,12 @@ a {
   height: 100%;
   min-height: 430px;
   object-fit: cover;
+  object-position: center 18%;
+}
+
+.hero-media picture {
+  display: block;
+  height: 100%;
 }
 
 .hero-badge {
@@ -238,14 +270,25 @@ a {
 
 .story-image {
   min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--mist);
 }
 
 .story-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center center;
   border: 5px solid var(--mist);
   box-shadow: 0 8px 18px rgba(10, 58, 102, 0.12);
+}
+
+.story-image picture,
+.offers-visual picture {
+  display: block;
+  width: 100%;
 }
 
 .story-copy {
@@ -265,45 +308,93 @@ a {
   margin-top: 0.55rem;
 }
 
-.offer-grid {
+.offers-layout {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.2rem;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  gap: 1.3rem;
 }
 
-.offer-card {
+.offers-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: var(--surface);
   box-shadow: 0 12px 24px rgba(10, 58, 102, 0.08);
 }
 
-.offer-media {
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-}
-
-.offer-card img {
+.offers-visual img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center center;
 }
 
-.offer-copy {
-  padding: 1rem;
+.offer-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 1.2rem;
+  background: linear-gradient(180deg, rgba(99, 178, 228, 0.15) 0%, rgba(185, 218, 242, 0.35) 100%);
+  box-shadow: 0 12px 24px rgba(10, 58, 102, 0.08);
 }
 
-.offer-copy h3 {
-  margin: 0 0 0.45rem;
+.offer-cta h3 {
+  margin: 0;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 1.45rem;
+  font-size: clamp(1.8rem, 3vw, 2.25rem);
   letter-spacing: 0.01em;
   text-transform: uppercase;
 }
 
-.offer-copy p {
+.offer-cta-copy {
   margin: 0;
   color: var(--muted);
   line-height: 1.6;
   font-size: 0.92rem;
+}
+
+.offer-cta form {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.offer-cta input,
+.offer-cta select,
+.offer-cta textarea {
+  width: 100%;
+  border: 0;
+  padding: 0.78rem 0.85rem;
+  font: inherit;
+  color: var(--ink);
+  background: #ffffff;
+  resize: vertical;
+}
+
+.offer-cta button,
+.whatsapp-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.95rem 1.1rem;
+  background: var(--ink);
+  color: #ffffff;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 140ms ease, background 140ms ease;
+}
+
+.offer-cta button:hover,
+.offer-cta button:focus-visible,
+.whatsapp-cta:hover,
+.whatsapp-cta:focus-visible {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
 }
 
 .social-strip {
@@ -440,7 +531,7 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .offer-grid {
+  .offers-layout {
     grid-template-columns: 1fr;
   }
 }
