@@ -7,6 +7,8 @@
   --accent: #0a3a66;
   --accent-dark: #4f73b7;
   --accent-light: #63b2e4;
+  --whatsapp: #25d366;
+  --whatsapp-dark: #1da851;
   --soft-blue: #b9daf2;
   --pale-blue: #e1eff8;
   --mist: #f0f6fa;
@@ -129,6 +131,10 @@ a {
 }
 
 .contact-lockup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.15rem;
   text-align: right;
 }
 
@@ -136,6 +142,22 @@ a {
   font-size: clamp(1.2rem, 3vw, 1.8rem);
   font-weight: 700;
   text-decoration: none;
+}
+
+.contact-subline {
+  margin: 0.1rem 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.contact-subline a {
+  display: inline-block;
+  margin-left: 0.35rem;
+  font-size: 1rem;
+  letter-spacing: normal;
 }
 
 .hero {
@@ -185,6 +207,9 @@ a {
 }
 
 .lead-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
   background: linear-gradient(180deg, var(--accent-light) 0%, var(--accent-dark) 100%);
   color: #ffffff;
   padding: 1.4rem;
@@ -193,7 +218,7 @@ a {
 .lead-form h2 {
   font-size: clamp(2rem, 4vw, 2.7rem);
   line-height: 0.95;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 .lead-form form {
@@ -231,6 +256,12 @@ a {
 .lead-form button:focus-visible {
   background: var(--accent-dark);
   transform: translateY(-1px);
+}
+
+.lead-form .whatsapp-cta {
+  width: 100%;
+  margin-top: 0.1rem;
+  font-size: 1.1rem;
 }
 
 .form-note {
@@ -591,7 +622,6 @@ a {
   border: 0;
   border-radius: 999px;
   padding: 0.95rem 1.1rem;
-  background: var(--ink);
   color: #ffffff;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 1.05rem;
@@ -602,12 +632,29 @@ a {
   transition: transform 140ms ease, background 140ms ease;
 }
 
+.offer-cta button {
+  background: var(--ink);
+}
+
+.whatsapp-cta {
+  background: var(--whatsapp);
+}
+
 .offer-cta button:hover,
 .offer-cta button:focus-visible,
 .whatsapp-cta:hover,
 .whatsapp-cta:focus-visible {
-  background: var(--accent-dark);
   transform: translateY(-1px);
+}
+
+.offer-cta button:hover,
+.offer-cta button:focus-visible {
+  background: var(--accent-dark);
+}
+
+.whatsapp-cta:hover,
+.whatsapp-cta:focus-visible {
+  background: var(--whatsapp-dark);
 }
 
 .social-strip {
